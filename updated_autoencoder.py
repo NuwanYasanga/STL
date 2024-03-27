@@ -210,8 +210,8 @@ class TransferEncoder(object):
 
         n_samples = len(X_train)
         idx = tf.random.shuffle(tf.range(n_samples))
-        X_train = tf.gather(X_train, idx)
-        Z_train = tf.gather(Z_train, idx)
+        X = tf.gather(X_train, idx)
+        Z = tf.gather(Z_train, idx)
         
         n_samples_val = len(X_val)
         idx_val = tf.random.shuffle(tf.range(n_samples_val))
